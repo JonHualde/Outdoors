@@ -1,0 +1,75 @@
+3 pillars:
+
+ - Responsive: Adapts to all devices
+ - Maintainable & scalable code: File name, classification & reusable code
+ - Web performance: Less http as possible, compress code, Sass preprocessor, 
+                    reduce the use of images
+
+Once the html and css element have been parsed, they formed a render tree.
+Readable by every browser (according to the code written within the css file)
+
+cascade css: 
+Error we can have: Same importance within the css.file on different rules.
+
+"!important" keyword has the highest priority in case of conflict in the code.
+
+inline styles (within the html) always have priority over the css file.
+ID > class > Universal Selector (like 'a' 'button' or 'p' tags)
+
+If a function/effect is not working, double check all the priorities and the
+specificities.
+
+Inheritance: 
+--> Font value inherite the value of the parent element. All the text properties
+are inherited (font size,family, color...)
+So no need to specify it every time. Just change it with the "rem" unit.
+Example: font-size: 150% (will take parent element size x 1.5)
+
+em = Parent value x 'x' 
+example: Font-size: 20px (parent)
+         Font-size: 3em (= to 72px) for the children
+
+rem = based on root value
+example: font-size: 10rem = 16px (root initial value) x 10 = 160px
+
+vh / vw: Based on the viewport (always responsive)
+
+Each property has an initial value, even if nothing is declared.
+Browser root font-size is equal to 16px for each page.
+
+block: takes as much width/space as possible. Cause line-breaks in the end. 100% of the
+parent width, vertically one after another.
+Inline-block: Occupies only content space, no line-breaks,box model applies
+Inline: Content distributed in lines, content space only, no L-B, no height and width,
+padding and margin only horizontal.
+
+Flow: 
+
+- Normal (relative) 
+- floats (float): Removed from the normal Flow
+- Absolute positioning: Taken out of the normal flow, No impact on surrounding content,
+                        (absolute, fixed)
+
+Best strategy: Think (think the layout first) --> Build --> Architect (Sass)
+
+BEM: Block Element Modifier
+ - Block: Standalone component that can be re-used
+ - Element: Part of a block, not useful outside of the block
+ - Modifier: A different version of a block or an element
+
+ ARCHITECT: The 7-1 pattern
+  - 7 different folders for partial Sass Files and 1 main Sass file to import all other Files
+  into a compiled CSS stylesheet.
+
+The 7 folders: 
+ - Base
+ - components
+ - layout
+ - Pages
+ - Themes
+ - Abstracts
+ - vendors
+
+ Sass: CSS preprocessor
+
+ 
